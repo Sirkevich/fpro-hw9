@@ -1,7 +1,7 @@
 var calculations = {
-    salasySum: function() {
+    salarySum: function() {
       return this.reduce(function(acc, next) {
-        return acc + next.salary;
+        return acc + next;
       }, 0);
     },
     logName: function() { 
@@ -36,7 +36,7 @@ var calculations = {
     }
   ];
   
-  console.log(calculations.salasySum.apply(users,[]));
+  console.log(calculations.salarySum.call(users.map(key => key.salary)));
   
   calculations.logName.call(users);
   
